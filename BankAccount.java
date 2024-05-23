@@ -1,4 +1,4 @@
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+
 
 public class BankAccount{
       // declare private fields for account num and balance
@@ -23,18 +23,17 @@ public class BankAccount{
       public void deposit( double amount ){
         if(amount > 0){
             balance += amount;
+        }else {
+            System.out.println("Deposit must be positive.");
         }
       }
 
        public void withdraw(double amount){
-            if(amount > balance){
-                System.out.println("withdrawal greater than balance");
-            }
-            if(amount < 0){
-                System.out.println("You can not withdraw a negative amount");
-            }else{
+           if(amount > 0 && balance > amount){
                 balance -= amount;
-            }
+           }else{
+            System.out.println("Insufficient balance or Invalid amount");
+           }
        }
        
        public void transfer(BankAccount toAccount, double amount){
