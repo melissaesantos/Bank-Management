@@ -37,7 +37,13 @@ public class BankAccount{
        }
        
        public void transfer(BankAccount toAccount, double amount){
-               double b=  toAccount.getBalance();
+               // so we want to get the balance of the other account that they want to transfer it to
+            if(amount > 0 && balance > amount){
+                this.withdraw(amount);
+                toAccount.deposit(amount);
+           }else{
+            System.out.println("Insufficient balance or Invalid amount");
+           }    
                 
        }
 } 
