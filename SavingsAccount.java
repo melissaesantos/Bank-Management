@@ -12,6 +12,7 @@ public class SavingsAccount extends BankAccount{
         double InterestB = getBalance()* interestRate/100;
         deposit(InterestB);
     }
+    //method over riding with toString()
     @Override
     public String toString(){
         return super.toString()+ ", Interest Rate: " + interestRate + "%";
