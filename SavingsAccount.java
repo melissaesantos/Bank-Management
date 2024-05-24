@@ -1,5 +1,5 @@
 public class SavingsAccount extends BankAccount{
-
+    // create the private interest rate
     private double interestRate;
 
     public SavingsAccount(String accountNumber, double initialBalance, double interestRate  ){
