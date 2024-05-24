@@ -1,5 +1,5 @@
 public class SavingsAccount extends BankAccount{
-
+    // create the private interest rate
     private double interestRate;
     //Saving account extends bank account so we need the super 
     //which is used to invoke the constructor of the immediate parent class
