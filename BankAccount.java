@@ -46,4 +46,8 @@ public class BankAccount{
            }    
                 
        }
+       @Override
+       public String toString(){
+        return "Account Number: " + accountNum + ", Balance: " + balance;
+       }
 } 
